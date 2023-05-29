@@ -207,11 +207,11 @@ void ArtNetProcessPacket(uint8_t * buf, size_t len) {
     uint16_t w_dimmer = changeUIntScale(artnet_conf.dimm, 0, 100, 0, Settings->rgbwwTable[3]) * 4;
     uint16_t ww_dimmer = changeUIntScale(artnet_conf.dimm, 0, 100, 0, Settings->rgbwwTable[4]) * 4;
     uint16_t color[LST_MAX] = {0};
-    color[0] = changeUIntScale(r8, 0, 255, 0, r_dimmer);
-    color[1] = changeUIntScale(g8, 0, 255, 0, g_dimmer);
-    color[2] = changeUIntScale(b8, 0, 255, 0, b_dimmer);
-    color[3] = changeUIntScale(w8, 0, 255, 0, w_dimmer);
-    color[4] = changeUIntScale(ww8, 0, 255, 0, ww_dimmer);
+    color[0] = ledGamma10_10(changeUIntScale(r8, 0, 255, 0, r_dimmer));
+    color[1] = ledGamma10_10(changeUIntScale(g8, 0, 255, 0, g_dimmer));
+    color[2] = ledGamma10_10(changeUIntScale(b8, 0, 255, 0, b_dimmer));
+    color[3] = ledGamma10_10(changeUIntScale(w8, 0, 255, 0, w_dimmer));
+    color[4] = ledGamma10_10(changeUIntScale(ww8, 0, 255, 0, ww_dimmer));
     // AddLog(LOG_LEVEL_DEBUG_MORE, PSTR("DMX: %02X-%02X-%02X univ=%i rows=%i max_univ=%i"), buf[idx+1], buf[idx], buf[idx+2], universe, row, artnet_conf.univ + artnet_conf.rows);
     LightSetOutputs(color);
   }
