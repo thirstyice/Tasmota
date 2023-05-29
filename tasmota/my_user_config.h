@@ -482,18 +482,18 @@
 // -- Time ----------------------------------------
 #define USE_TIMERS                               // Add support for up to 16 timers (+2k2 code)
   #define USE_TIMERS_WEB                         // Add timer webpage support (+4k5 code)
-  #define USE_SUNRISE                            // Add support for Sunrise and sunset tools (+16k)
+//  #define USE_SUNRISE                            // Add support for Sunrise and sunset tools (+16k)
     #define SUNRISE_DAWN_ANGLE DAWN_NORMAL       // Select desired Dawn Angle from (DAWN_NORMAL, DAWN_CIVIL, DAWN_NAUTIC, DAWN_ASTRONOMIC)
 
 // -- Ping ----------------------------------------
-//  #define USE_PING                                 // Enable Ping command (+2k code)
+  #define USE_PING                                 // Enable Ping command (+2k code)
 
 // -- Compression ---------------------------------
 #define USE_UNISHOX_COMPRESSION                  // Add support for string compression in Rules or Scripts
 
 // -- Rules or Script  ----------------------------
 // Select none or only one of the below defines USE_RULES or USE_SCRIPT
-#define USE_RULES                                // Add support for rules (+8k code)
+//#define USE_RULES                                // Add support for rules (+8k code)
 //  #define USE_EXPRESSION                         // Add support for expression evaluation in rules (+3k2 code, +64 bytes mem)
 //    #define SUPPORT_IF_STATEMENT                 // Add support for IF statement in rules (+4k2 code, -332 bytes mem)
 //  #define USER_RULE1 "<Any rule1 data>"          // Add rule1 data saved at initial firmware load or when command reset is executed
@@ -507,34 +507,34 @@
 //#define USER_BACKLOG "<Any command separated by a semicolon (;)>"  // Add commands executed at firmware load or when command reset is executed
 
 // -- Optional modules ----------------------------
-#define ROTARY_V1                                // Add support for Rotary Encoder as used in MI Desk Lamp (+0k8 code)
+//#define ROTARY_V1                                // Add support for Rotary Encoder as used in MI Desk Lamp (+0k8 code)
   #define ROTARY_MAX_STEPS     10                // Rotary step boundary
-#define USE_SONOFF_RF                            // Add support for Sonoff Rf Bridge (+3k2 code)
+//#define USE_SONOFF_RF                            // Add support for Sonoff Rf Bridge (+3k2 code)
   #define USE_RF_FLASH                           // Add support for flashing the EFM8BB1 chip on the Sonoff RF Bridge. C2CK must be connected to GPIO4, C2D to GPIO5 on the PCB (+2k7 code)
-#define USE_SONOFF_SC                            // Add support for Sonoff Sc (+1k1 code)
+//#define USE_SONOFF_SC                            // Add support for Sonoff Sc (+1k1 code)
 #define USE_TUYA_MCU                             // Add support for Tuya Serial MCU
   #define TUYA_DIMMER_ID       0                 // Default dimmer Id
   #define USE_TUYA_TIME                          // Add support for Set Time in Tuya MCU
 //#define USE_TUYAMCUBR                            // Add support for TuyaMCU Bridge
-#define USE_ARMTRONIX_DIMMERS                    // Add support for Armtronix Dimmers (+1k4 code)
-#define USE_PS_16_DZ                             // Add support for PS-16-DZ Dimmer (+2k code)
-#define USE_SONOFF_IFAN                          // Add support for Sonoff iFan02 and iFan03 (+2k code)
-#define USE_BUZZER                               // Add support for a buzzer (+0k6 code)
-#define USE_ARILUX_RF                            // Add support for Arilux RF remote controller (+0k8 code, 252 iram (non 2.3.0))
-#define USE_SHUTTER                              // Add Shutter support for up to 4 shutter with different motortypes (+11k code)
+//#define USE_ARMTRONIX_DIMMERS                    // Add support for Armtronix Dimmers (+1k4 code)
+//#define USE_PS_16_DZ                             // Add support for PS-16-DZ Dimmer (+2k code)
+//#define USE_SONOFF_IFAN                          // Add support for Sonoff iFan02 and iFan03 (+2k code)
+//#define USE_BUZZER                               // Add support for a buzzer (+0k6 code)
+//#define USE_ARILUX_RF                            // Add support for Arilux RF remote controller (+0k8 code, 252 iram (non 2.3.0))
+//#define USE_SHUTTER                              // Add Shutter support for up to 4 shutter with different motortypes (+11k code)
 #define USE_DEEPSLEEP                            // Add support for deepsleep (+1k code)
-#define USE_EXS_DIMMER                           // Add support for ES-Store Wi-Fi Dimmer (+1k5 code)
+//#define USE_EXS_DIMMER                           // Add support for ES-Store Wi-Fi Dimmer (+1k5 code)
 //  #define EXS_MCU_CMNDS                          // Add command to send MCU commands (+0k8 code)
 //#define USE_HOTPLUG                              // Add support for sensor HotPlug
-#define USE_DEVICE_GROUPS                        // Add support for device groups (+5k5 code)
+//#define USE_DEVICE_GROUPS                        // Add support for device groups (+5k5 code)
   #define DEVICE_GROUPS_ADDRESS 239,255,250,250  // Device groups multicast address
   #define DEVICE_GROUPS_PORT 4447                // Device groups multicast port
   #define USE_DEVICE_GROUPS_SEND                 // Add support for the DevGroupSend command (+0k6 code)
 #define USE_PWM_DIMMER                           // Add support for MJ-SD01/acenx/NTONPOWER PWM dimmers (+2k3 code, DGR=0k7)
   #define USE_PWM_DIMMER_REMOTE                  // Add support for remote switches to PWM Dimmer (requires USE_DEVICE_GROUPS) (+0k6 code)
 //#define USE_KEELOQ                               // Add support for Jarolift rollers by Keeloq algorithm (+4k5 code)
-#define USE_SONOFF_D1                            // Add support for Sonoff D1 Dimmer (+0k7 code)
-#define USE_SHELLY_DIMMER                        // Add support for Shelly Dimmer (+3k code)
+//#define USE_SONOFF_D1                            // Add support for Sonoff D1 Dimmer (+0k7 code)
+//#define USE_SHELLY_DIMMER                        // Add support for Shelly Dimmer (+3k code)
   #define SHELLY_CMDS                            // Add command to send co-processor commands (+0k3 code)
   #define SHELLY_FW_UPGRADE                      // Add firmware upgrade option for co-processor (+3k4 code)
 //  #define SHELLY_VOLTAGE_MON                     // Add support for reading voltage and current measurment (-0k0 code)
@@ -565,18 +565,18 @@
   #define USE_LIGHT_ARTNET_MCAST 239,255,25,54   // Multicast address used to listen: 239.255.25.54
 
 // -- Counter input -------------------------------
-#define USE_COUNTER                              // Enable inputs as counter (+0k8 code)
+//#define USE_COUNTER                              // Enable inputs as counter (+0k8 code)
 
 // -- Internal Analog input -----------------------
 //#define USE_ADC_VCC                              // Display Vcc in Power status. Disable for use as Analog input on selected devices
 
 // -- One wire sensors ----------------------------
-#define USE_DS18x20                              // Add support for DS18x20 sensors with id sort, single scan and read retry (+2k6 code)
+//#define USE_DS18x20                              // Add support for DS18x20 sensors with id sort, single scan and read retry (+2k6 code)
 //  #define W1_PARASITE_POWER                      // Optimize for parasite powered sensors
 //  #define DS18x20_USE_ID_ALIAS                   // Add support aliasing for DS18x20 sensors. See comments in xsns_05 files (+0k5 code)
 
 // -- I2C sensors ---------------------------------
-#define USE_I2C                                  // I2C using library wire (+10k code, 0k2 mem, 124 iram)
+//#define USE_I2C                                  // I2C using library wire (+10k code, 0k2 mem, 124 iram)
 #define I2CDRIVERS_0_31        0xFFFFFFFF          // Enable I2CDriver0  to I2CDriver31
 #define I2CDRIVERS_32_63       0xFFFFFFFF          // Enable I2CDriver32 to I2CDriver63
 #define I2CDRIVERS_64_95       0xFFFFFFFF          // Enable I2CDriver64 to I2CDriver95
@@ -605,10 +605,10 @@
 //  #define USE_SI1145                             // [I2cDriver19] Enable SI1145/46/47 sensor (I2C address 0x60) (+1k code)
 //  #define USE_LM75AD                             // [I2cDriver20] Enable LM75AD sensor (I2C addresses 0x48 - 0x4F) (+0k5 code)
 //  #define USE_APDS9960                           // [I2cDriver21] Enable APDS9960 Proximity Sensor (I2C address 0x39). Disables SHT and VEML6070 (+4k7 code)
-    #define USE_APDS9960_GESTURE                   // Enable APDS9960 Gesture feature (+2k code)
-    #define USE_APDS9960_PROXIMITY                 // Enable APDS9960 Proximity feature (>50 code)
-    #define USE_APDS9960_COLOR                     // Enable APDS9960 Color feature (+0.8k code)
-    #define USE_APDS9960_STARTMODE  0              // Default to enable Gesture mode
+//    #define USE_APDS9960_GESTURE                   // Enable APDS9960 Gesture feature (+2k code)
+//    #define USE_APDS9960_PROXIMITY                 // Enable APDS9960 Proximity feature (>50 code)
+//    #define USE_APDS9960_COLOR                     // Enable APDS9960 Color feature (+0.8k code)
+//    #define USE_APDS9960_STARTMODE  0              // Default to enable Gesture mode
 //  #define USE_MCP230xx                           // [I2cDriver22] Enable MCP23008/MCP23017 - Must define I2C Address in #define USE_MCP230xx_ADDR below - range 0x20 - 0x27 (+5k1 code)
 //    #define USE_MCP230xx_ADDR 0x20               // Enable MCP23008/MCP23017 I2C Address to use (Must be within range 0x20 through 0x26 - set according to your wired setup)
 //    #define USE_MCP230xx_OUTPUT                  // Enable MCP23008/MCP23017 OUTPUT support through sensor29 commands (+2k2 code)
@@ -634,7 +634,7 @@
 //  #define USE_SCD40                              // [I2cDriver62] Enable Sensiron SCd40/Scd41 CO2 sensor (I2C address 0x62) (+3k5 code)
 //  #define USE_SPS30                              // [I2cDriver30] Enable Sensiron SPS30 particle sensor (I2C address 0x69) (+1.7 code)
 //  #define USE_ADE7880                            // [I2cDriver65] Enable ADE7880 Energy monitor as used on Shelly 3EM (I2C address 0x38) (+3k8)
-  #define USE_ADE7953                            // [I2cDriver7] Enable ADE7953 Energy monitor as used on Shelly 2.5 (I2C address 0x38) (+1k5)
+//  #define USE_ADE7953                            // [I2cDriver7] Enable ADE7953 Energy monitor as used on Shelly 2.5 (I2C address 0x38) (+1k5)
 //  #define USE_VL53L0X                            // [I2cDriver31] Enable VL53L0x time of flight sensor (I2C address 0x29) (+4k code)
 //    #define VL53L0X_XSHUT_ADDRESS 0x78           //   VL53L0X base address when used with XSHUT control
 //  #define USE_VL53L1X                            // [I2cDriver54] Enable VL53L1X time of flight sensor (I2C address 0x29) using Pololu VL53L1X library (+2k9 code)
@@ -839,16 +839,16 @@
 //  #define GM861_HEARTBEAT                        // Enable heartbeat (+0k2 code)
 
 // -- Power monitoring sensors --------------------
-#define USE_ENERGY_SENSOR                        // Add support for Energy Monitors (+14k code)
-#define USE_ENERGY_MARGIN_DETECTION              // Add support for Energy Margin detection (+1k6 code)
+//#define USE_ENERGY_SENSOR                        // Add support for Energy Monitors (+14k code)
+//#define USE_ENERGY_MARGIN_DETECTION              // Add support for Energy Margin detection (+1k6 code)
   #define USE_ENERGY_POWER_LIMIT                 // Add additional support for Energy Power Limit detection (+1k2 code)
-#define USE_ENERGY_DUMMY                         // Add support for dummy Energy monitor allowing user values (+0k7 code)
-#define USE_HLW8012                              // Add support for HLW8012, BL0937 or HJL-01 Energy Monitor for Sonoff Pow and WolfBlitz
-#define USE_CSE7766                              // Add support for CSE7766 Energy Monitor for Sonoff S31 and Pow R2
-#define USE_PZEM004T                             // Add support for PZEM004T Energy monitor (+2k code)
-#define USE_PZEM_AC                              // Add support for PZEM014,016 Energy monitor (+1k1 code)
-#define USE_PZEM_DC                              // Add support for PZEM003,017 Energy monitor (+1k1 code)
-#define USE_MCP39F501                            // Add support for MCP39F501 Energy monitor as used in Shelly 2 (+3k1 code)
+//#define USE_ENERGY_DUMMY                         // Add support for dummy Energy monitor allowing user values (+0k7 code)
+//#define USE_HLW8012                              // Add support for HLW8012, BL0937 or HJL-01 Energy Monitor for Sonoff Pow and WolfBlitz
+//#define USE_CSE7766                              // Add support for CSE7766 Energy Monitor for Sonoff S31 and Pow R2
+//#define USE_PZEM004T                             // Add support for PZEM004T Energy monitor (+2k code)
+//#define USE_PZEM_AC                              // Add support for PZEM014,016 Energy monitor (+1k1 code)
+//#define USE_PZEM_DC                              // Add support for PZEM003,017 Energy monitor (+1k1 code)
+//#define USE_MCP39F501                            // Add support for MCP39F501 Energy monitor as used in Shelly 2 (+3k1 code)
 //#define USE_SDM72                                // Add support for Eastron SDM72-Modbus energy monitor (+0k3 code)
   #define SDM72_SPEED          9600              // SDM72-Modbus RS485 serial speed (default: 9600 baud)
   // #define SDM72_IMPEXP                            // Show additonal import/export active energy and power in MQTT and Web (+0k5 code)
@@ -870,7 +870,7 @@
 //#define USE_LE01MR                               // Add support for F&F LE-01MR Modbus energy monitor (+1k code)
   #define LE01MR_SPEED         9600              // LE-01MR modbus baudrate (default: 9600)
   #define LE01MR_ADDR          1                 // LE-01MR modbus address (default: 0x01)
-#define USE_BL09XX                               // Add support for various BL09XX Energy monitor as used in Blitzwolf SHP-10 or Sonoff Dual R3 v2 (+1k6 code)
+//#define USE_BL09XX                               // Add support for various BL09XX Energy monitor as used in Blitzwolf SHP-10 or Sonoff Dual R3 v2 (+1k6 code)
 //#define USE_TELEINFO                             // Add support for Teleinfo via serial RX interface (+5k2 code, +168 RAM + SmartMeter LinkedList Values RAM)
 //#define USE_IEM3000                              // Add support for Schneider Electric iEM3000-Modbus series energy monitor (+0k8 code)
   #define IEM3000_SPEED          19200           // iEM3000-Modbus RS485 serial speed (default: 19200 baud)
@@ -897,7 +897,7 @@
 // Code impact of IR full protocols is +90k code, 3k mem
 
 // -- IR Remote features - subset of IR protocols --------------------------
-#define USE_IR_REMOTE                            // Send IR remote commands using library IRremoteESP8266 (+4k3 code, 0k3 mem, 48 iram)
+//#define USE_IR_REMOTE                            // Send IR remote commands using library IRremoteESP8266 (+4k3 code, 0k3 mem, 48 iram)
   #define IR_SEND_INVERTED          false        // Invert the output. (default = false) e.g. LED is illuminated when GPIO is LOW rather than HIGH.
                                                  // Setting inverted to something other than the default could easily destroy your IR LED if you are overdriving it.
                                                  // Unless you REALLY know what you are doing, don't change this.
@@ -1104,7 +1104,7 @@
 //  #define ETH_ADDRESS       0                    // [EthAddress] 0 = PHY0 .. 31 = PHY31
 //  #define ETH_CLKMODE       0                    // [EthClockMode] 0 = ETH_CLOCK_GPIO0_IN, 1 = ETH_CLOCK_GPIO0_OUT, 2 = ETH_CLOCK_GPIO16_OUT, 3 = ETH_CLOCK_GPIO17_OUT
 
-#define USE_ADC                                  // Add support for ADC on GPIO32 to GPIO39
+//#define USE_ADC                                  // Add support for ADC on GPIO32 to GPIO39
 
 #define USE_NETWORK_LIGHT_SCHEMES                // Add support for light schemes via DDP (via UDP on port 4048)
 
